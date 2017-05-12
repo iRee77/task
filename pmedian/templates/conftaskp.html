@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Введите уникальное название задачи</h1>
+    <form action="{% url 'conftaskp'%}" method='POST'>
+        {% csrf_token %}
+        <input type="text" name="description" required>
+        <p><input type="submit" class="button" value="Отправить"></p>
+    </form>
+</body>
+</html>

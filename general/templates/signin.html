@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Введите логин и пароль</h1>
+        <form action="{% url 'signin' %}" method="post">
+            {% csrf_token %}
+                <p><input type="text" name="login" placeholder="Логин" required></p>
+                <p><input type="password" name="password" placeholder="Пароль" required></p>
+                <input type="submit" class="button" value="Войти">
+                {% if login_error %}
+                <label>{{ login_error }}</label>
+                {% endif %}
+        </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <section>
+        <ul>
+            {% if user.is_authenticated %}
+            <li><a href="/logout">Выйти из <b>{{ user }}</b> </a></li>
+            {% else %}
+            <li><a href="/signin">Войти</a></li>
+            <li><a href="/register">Регистрация</a></li>
+            {% endif %}
+        </ul>
+    </section>
+<table border="1">
+   <caption>Выбор алгоритма</caption>
+   <tr><th>P-медиан</th><th>Простейшая задача размещения</th></tr>
+   <tr><td>Описание задачи о p-медиане</td><td>Описание задачи простейшего размещения</td></tr>
+   <tr><td><form><input type="button" value="Сконфигурировать задачу" onClick='location.href="conftaskp"'></form></td><td><button>Сконфигурировать задачу</button></td></tr></tr>
+</table>
+</body>
+</html>
